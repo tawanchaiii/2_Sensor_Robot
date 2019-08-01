@@ -1,8 +1,8 @@
 #include <ipst.h>
-#define L 3
-#define R 4
-#define vl 630
-#define vr 630
+#define L 1
+#define R 2
+#define vl 600
+#define vr 600
 byte x;
 void setup() {
   OK();
@@ -14,11 +14,11 @@ void setup() {
   //setservo();
  // Go_T(); Go_L(); Go_R();
   //while (1) qqq();
- //Go_T() ;
+   Go_L(); Go_R();
  //qqq();
 }
 void loop () {
-    8checksonsor();
+    //checksonsor();
 }
 void qqq() {
   while (1) {
