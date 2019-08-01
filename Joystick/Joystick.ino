@@ -7,15 +7,18 @@ byte x;
 void setup() {
   OK();
   Serial1.begin(9600);
-  servo(2, 180);
+  servo(1, 0);
+  servo(2, 0);
   setTextSize(2);
   //Go_L(); Go_R();
   //setservo();
-  while (1) qqq();
-
+ // Go_T(); Go_L(); Go_R();
+  //while (1) qqq();
+ //Go_T() ;
+ //qqq();
 }
 void loop () {
-  //checksonsor()
+    8checksonsor();
 }
 void qqq() {
   while (1) {
@@ -52,25 +55,20 @@ void qqq() {
     }
     else if (x == 0x20)//เลี้ยงขวา
     {
-      sr(75);
+      sr(50);
     }
-    else if (x == 0x20)//เลี้ยงขวา
-    {
-      sr(75);
-    }
-
     else if (x == 0x40)//เลี้ยงซ้าย
     {
-      sl(75);
+      sl(50);
     }
     else if (x == 0x8)//ขึ้น
     {
-      servo (2, 110);
+      servo (1, 70);
       // delay (200);
       // servo (2, -1);
     }
     else if (x == 0x4)//ลง
-    { servo (2, 180);
+    { servo (1, 0);
       // delay (200);
       //servo (2, -1);
     }
@@ -86,9 +84,5 @@ void qqq() {
 
   /// place automatic code here
   fd(50); delay(500);
-  Go_T(); Go_L(); Go_L(); //Go_T(); Go_L(); Go_T(); Go_T();
-}
-void checksonsor() {
-  glcd(0, 0, "A1 = %d ", analog(1));
-  glcd(1, 0, "A2 = %d",  analog(2));
+  Go_T(); Go_L(); Go_R(); //Go_T(); Go_L(); Go_T(); Go_T();
 }

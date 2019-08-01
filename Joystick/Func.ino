@@ -14,7 +14,9 @@ void Go_To_Keep() {
     }
   }
   ao(); bk(50); delay(200); ao();
-  servo(2, 105);
+  servo(2, 110);
+  for(int i=0;i<300;i++) Go_T();
+  servo(2, 180);
   /*fd(50); delay(1000); ao();
     sr(50); delay(1000);ao();
     sr(50);
